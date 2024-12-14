@@ -1,1 +1,1 @@
-# Rock paper scissors JS
+## Projects

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/rock-paper-scissors.css" />
+    <title>Rock paper scissors</title>
+  </head>
+  <body>
+    <!-- rock paper scissors container -->
+    <div class="rps-container">
+      <h1>Rock Paper Scissors</h1>
+
+      <!-- Button container -->
+      <div class="button-rps-container">
+        <!-- Button rock -->
+        <button class="move-button" id="js-btn-rock">
+          <img
+            src="assets/medias/images/rock-emoji.png"
+            alt="rock-emoji"
+            class="move-icon"
+          />
+        </button>
+        <!-- Button paper -->
+        <button class="move-button" id="js-btn-paper">
+          <img
+            src="assets/medias/images/paper-emoji.png"
+            class="move-icon"
+            alt="paper-emoji"
+          />
+        </button>
+        <!-- Button scissors -->
+        <button class="move-button" id="js-btn-scissors">
+          <img
+            src="assets/medias/images/scissors-emoji.png"
+            class="move-icon"
+            alt="scissors-emoji"
+          />
+        </button>
+      </div>
+
+      <div class="display-games">
+        <!-- Result -->
+        <p class="js-result result"></p>
+
+        <!-- Display moves -->
+        <p class="js-moves"></p>
+
+        <!-- Display score -->
+        <p class="js-score score"></p>
+      </div>
+
+      <div class="reset-score-container">
+        <button class="reset-score" id="js-reset-score">Reset Score</button>
+      </div>
+    </div>
+
+    <script src="rock-paper-scissors.js"></script>
+  </body>
+</html>

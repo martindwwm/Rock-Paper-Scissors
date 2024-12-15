@@ -1,0 +1,95 @@
+:root {
+  --text-color: #fff;
+  --main-bg-color: rgb(25, 25, 25);
+  --space-bottom: 50px;
+  --size: 2.7rem;
+  --btn-bg: transparent;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
+  font-family: Arial;
+}
+
+/* Rock paper scissors container */
+.rps-container {
+  min-width: 100vw;
+  min-height: 100vh;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Button rps container */
+.button-rps-container {
+  margin-top: 30px;
+}
+
+/* title */
+h1 {
+  font-size: 4rem;
+  font-weight: 550;
+}
+
+/* Icon moves */
+.move-icon {
+  height: 50px;
+}
+
+/* Button moves */
+.move-button {
+  height: 120px;
+  width: 120px;
+  border: 3px solid var(--text-color);
+  border-radius: 60px;
+  margin-right: 13px;
+  background-color: var(--btn-bg);
+  cursor: pointer;
+}
+
+/* Display Games */
+.display-games {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  gap: 25px;
+  font-size: 1.8rem;
+}
+
+/* Result */
+.result {
+  margin-top: var(--space-bottom);
+  font-size: var(--size);
+  font-weight: bold;
+}
+
+/* Display score */
+.score {
+  margin-top: 30px;
+}
+
+/* Reset score */
+.reset-score-container {
+  margin-top: 15px;
+}
+
+.reset-score {
+  background-color: var(--text-color);
+  padding: 10px 15px;
+  cursor: pointer;
+  font-size: 1.5rem;
+}

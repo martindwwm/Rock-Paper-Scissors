@@ -5,6 +5,7 @@ let score = JSON.parse(localStorage.getItem("score")) || {
   ties: 0,
 };
 
+// Score
 updateScore();
 
 // Button rock paper scissors
@@ -12,8 +13,6 @@ const btnRock = document.getElementById("js-btn-rock");
 const btnPaper = document.getElementById("js-btn-paper");
 const btnScissors = document.getElementById("js-btn-scissors");
 const btnResetScore = document.getElementById("js-reset-score");
-
-// Score
 
 // Button rock
 btnRock?.addEventListener("click", () => {

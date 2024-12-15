@@ -93,3 +93,23 @@ h1 {
   cursor: pointer;
   font-size: 1.5rem;
 }
+
+/* Media queries */
+@media screen and (max-width: 429px) {
+  .rps-container {
+    width: 100vw;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  .button-rps-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    height: 50%;
+    gap: 10px;
+  }
+}

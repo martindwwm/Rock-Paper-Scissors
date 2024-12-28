@@ -13,6 +13,16 @@ const btnScissors = document.getElementById("js-btn-scissors");
 const btnResetScore = document.getElementById("js-reset-score");
 const btnAutoPlay = document.querySelector(".js-auto-play-button");
 
+document.body.addEventListener("keydown", (event) => {
+  if (event.key === "r") {
+    playGames("rock");
+  } else if (event.key === "p") {
+    playGames("paper");
+  } else if (event.key === "s") {
+    playGames("scissors");
+  }
+});
+
 btnRock?.addEventListener("click", () => {
   playGames("rock");
 });

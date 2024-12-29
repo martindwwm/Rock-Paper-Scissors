@@ -58,7 +58,7 @@ function autoPlay() {
     }, 1000);
 
     if (btnAutoPlay) {
-      btnAutoPlay.innerHTML = "Stop";
+      btnAutoPlay.innerHTML = "Stop playing";
     }
     isAutoPlaying = true;
   } else {

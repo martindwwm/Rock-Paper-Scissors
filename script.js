@@ -6,6 +6,12 @@ let score = JSON.parse(localStorage.getItem("score")) || {
 
 updateScore();
 
+const confirmMessage = document.querySelector(
+  ".js-confirmation-message-container"
+);
+const btnYes = document.querySelector(".js-button-yes");
+const btnNo = document.querySelector(".js-button-no");
+
 // Button rock paper scissors
 const btnRock = document.getElementById("js-btn-rock");
 const btnPaper = document.getElementById("js-btn-paper");
@@ -20,6 +26,10 @@ document.body.addEventListener("keydown", (event) => {
     playGames("paper");
   } else if (event.key === "s") {
     playGames("scissors");
+  } else if (event.key === "a") {
+    autoPlay();
+  } else if (event.key === "Backspace") {
+    confirmResetScoreMessage();
   }
 });
 
@@ -36,16 +46,28 @@ btnScissors?.addEventListener("click", () => {
 });
 
 btnResetScore?.addEventListener("click", () => {
-  score.wins = 0;
-  score.losses = 0;
-  score.ties = 0;
-  localStorage.removeItem("score");
-  updateScore();
+  confirmResetScoreMessage();
 });
 
 btnAutoPlay?.addEventListener("click", () => {
   autoPlay();
 });
+
+function confirmResetScoreMessage() {
+  confirmMessage.style.opacity = "1";
+  btnYes?.addEventListener("click", () => {
+    confirmMessage.style.opacity = "0";
+    score.wins = 0;
+    score.losses = 0;
+    score.ties = 0;
+    localStorage.removeItem("score");
+    updateScore();
+  });
+
+  btnNo?.addEventListener("click", () => {
+    confirmMessage.style.opacity = "0";
+  });
+}
 
 let isAutoPlaying = false;
 let intervalId;
